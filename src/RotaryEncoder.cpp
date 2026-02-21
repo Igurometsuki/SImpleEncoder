@@ -74,7 +74,7 @@ void RotaryEncoder::poll() {
   _lastState = state;
 }
 
-int RotaryEncoder::getValue() const {
+int8_t RotaryEncoder::getValue() const {
   return _value;
 }
 
@@ -83,7 +83,7 @@ void RotaryEncoder::reset() {
   _accumulator = 0;
 }
 
-void RotaryEncoder::setValue(int value) {
+void RotaryEncoder::setValue(int8_t value) {
   _value = value;
   _accumulator = 0;
 }

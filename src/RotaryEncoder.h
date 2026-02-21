@@ -34,13 +34,13 @@ public:
   void poll();
   
   // 現在の値を取得
-  int getValue() const;
+  int8_t getValue() const;
   
   // 値をリセット
   void reset();
   
   // 値を設定
-  void setValue(int value);
+  void setValue(int8_t value);
 
 private:
   uint8_t _pinA;
@@ -48,7 +48,7 @@ private:
   uint16_t _sampleIntervalUs;
   uint8_t _detentCount;
   
-  volatile int _value;
+  volatile int8_t _value;
   uint8_t _lastState;
   int8_t _accumulator;
   unsigned long _lastSampleTime;
